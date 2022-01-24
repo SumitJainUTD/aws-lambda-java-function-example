@@ -1,0 +1,45 @@
+<assembly xmlns="http://maven.apache.org/ASSEMBLY/2.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/ASSEMBLY/2.1.0 http://maven.apache.org/xsd/assembly-2.1.0.xsd">    <includeBaseDirectory>true</includeBaseDirectory>
+
+    <id>src</id>
+    <formats>
+        <format>tar.gz</format>
+        <format>tar.bz2</format>
+        <format>zip</format>
+        <format>jar</format>
+    </formats>
+<!--    <fileSets>-->
+<!--        <fileSet>-->
+<!--            <directory>${project.basedir}</directory>-->
+<!--            <includes>-->
+<!--                <include>pom.xml</include>-->
+<!--            </includes>-->
+<!--            <useDefaultExcludes>false</useDefaultExcludes>-->
+<!--        </fileSet>-->
+<!--&lt;!&ndash;        <fileSet>&ndash;&gt;-->
+<!--&lt;!&ndash;            <directory>${project.basedir}/src</directory>&ndash;&gt;-->
+<!--&lt;!&ndash;            &lt;!&ndash;            <useDefaultExcludes>true</useDefaultExcludes>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        </fileSet>&ndash;&gt;-->
+<!--    </fileSets>-->
+<!--    <files>-->
+<!--        <file>-->
+<!--            <source> ${project.build.directory}/${project.artifactId}-${project.version}.jar</source>-->
+<!--            <outputDirectory>/</outputDirectory>-->
+<!--        </file>-->
+<!--    </files>-->
+<!--    <dependencySets>-->
+<!--        <dependencySet>-->
+<!--            <outputDirectory>lib</outputDirectory>-->
+<!--&lt;!&ndash;            <excludes>&ndash;&gt;-->
+<!--&lt;!&ndash;                <exclude>${project.groupId}:${project.artifactId}:jar:*</exclude>&ndash;&gt;-->
+<!--&lt;!&ndash;            </excludes>&ndash;&gt;-->
+<!--        </dependencySet>-->
+<!--    </dependencySets>-->
+    <dependencySets>
+        <dependencySet>
+            <unpack>false</unpack>
+            <scope>runtime</scope>
+            <outputDirectory>lib</outputDirectory>
+        </dependencySet>
+    </dependencySets>
+</assembly>
